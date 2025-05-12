@@ -1,0 +1,13 @@
+**THIS CHECKLIST IS NOT COMPLETE**. Use `--show-ignored-findings` to show all the results.
+Summary
+ - [no-reason-string](#no-reason-string) (1 results) (Low)
+## no-reason-string
+Impact: Low
+Confidence: Low
+ - [ ] ID-0
+[ReentrancySimpleFixed.withdraw()](../../contracts/beta-contracts/sdb-subfolders-slither-v11-own/Issues/1_Malicios_Environment_Transactions_Input/1A_Reentrancy/ReentrancySimpleFixed/ReentrancySimpleFixed.sol#L11-L16) require/ revert has not reason string:- 
+	- [require(bool)(success)](../../contracts/beta-contracts/sdb-subfolders-slither-v11-own/Issues/1_Malicios_Environment_Transactions_Input/1A_Reentrancy/ReentrancySimpleFixed/ReentrancySimpleFixed.sol#L15)
+
+../../contracts/beta-contracts/sdb-subfolders-slither-v11-own/Issues/1_Malicios_Environment_Transactions_Input/1A_Reentrancy/ReentrancySimpleFixed/ReentrancySimpleFixed.sol#L11-L16
+
+

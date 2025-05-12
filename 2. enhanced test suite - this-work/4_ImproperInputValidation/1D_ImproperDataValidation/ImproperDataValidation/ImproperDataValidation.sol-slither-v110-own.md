@@ -1,0 +1,20 @@
+**THIS CHECKLIST IS NOT COMPLETE**. Use `--show-ignored-findings` to show all the results.
+Summary
+ - [div-by-zero-unchecked](#div-by-zero-unchecked) (2 results) (Low)
+## div-by-zero-unchecked
+Impact: Low
+Confidence: Low
+ - [ ] ID-0
+[ImproperDataValidation.modifyState(uint256)](../../contracts/beta-contracts/1.sdb-subfolders-critical-all/4_ImproperInputValidation/1D_ImproperDataValidation/ImproperDataValidation/ImproperDataValidation.sol#L45-L47) performs divison by not zero-checked variable:- 
+	- [_someNumber = _someNumber / option](../../contracts/beta-contracts/1.sdb-subfolders-critical-all/4_ImproperInputValidation/1D_ImproperDataValidation/ImproperDataValidation/ImproperDataValidation.sol#L46)
+
+../../contracts/beta-contracts/1.sdb-subfolders-critical-all/4_ImproperInputValidation/1D_ImproperDataValidation/ImproperDataValidation/ImproperDataValidation.sol#L45-L47
+
+
+ - [ ] ID-1
+[ImproperDataValidation.isWinner(uint256)](../../contracts/beta-contracts/1.sdb-subfolders-critical-all/4_ImproperInputValidation/1D_ImproperDataValidation/ImproperDataValidation/ImproperDataValidation.sol#L40-L43) performs divison by not zero-checked variable:- 
+	- [(_someNumber <= option) || (_someNumber / option) == 1](../../contracts/beta-contracts/1.sdb-subfolders-critical-all/4_ImproperInputValidation/1D_ImproperDataValidation/ImproperDataValidation/ImproperDataValidation.sol#L42)
+
+../../contracts/beta-contracts/1.sdb-subfolders-critical-all/4_ImproperInputValidation/1D_ImproperDataValidation/ImproperDataValidation/ImproperDataValidation.sol#L40-L43
+
+

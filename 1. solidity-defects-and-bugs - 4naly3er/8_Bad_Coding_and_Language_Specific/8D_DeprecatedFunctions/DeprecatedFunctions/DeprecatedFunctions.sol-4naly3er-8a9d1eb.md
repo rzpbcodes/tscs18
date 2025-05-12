@@ -1,0 +1,43 @@
+# Report
+
+| |Issue|Instances|
+|-|:-|:-:|
+| [GAS-1](#GAS-1) | State variables only set in the constructor should be declared `immutable` | 1 |
+| [NC-1](#NC-1) | NatSpec is completely non-existent on functions that should have them | 1 |
+| [NC-2](#NC-2) | Consider using named mappings | 1 |
+
+
+
+### <a name="GAS-1"></a>[GAS-1] State variables only set in the constructor should be declared `immutable`
+Variables only set in the constructor and never edited afterwards should be marked as immutable, as it would avoid the expensive storage-writing operation in the constructor (around **20 000 gas** per variable) and replace the expensive storage-reading operations (around **2100 gas** per reading) to a less expensive value reading (**3 gas**)
+
+*Instances (1)*:
+```solidity
+File: DeprecatedFunctions.sol
+
+11:         deadlineTimestamp = _deadlineTimestamp;
+
+```
+
+### <a name="NC-1"></a>[NC-1] NatSpec is completely non-existent on functions that should have them
+Public and external functions that aren't view or pure should have NatSpec comments
+
+*Instances (1)*:
+```solidity
+File: DeprecatedFunctions.sol
+
+14:     function receiveApplication() external {
+
+```
+
+### <a name="NC-2"></a>[NC-2] Consider using named mappings
+Consider moving to solidity version 0.8.18 or later, and using [named mappings](https://ethereum.stackexchange.com/questions/51629/how-to-name-the-arguments-in-mapping/145555#145555) to make it easier to understand the purpose of each mapping
+
+*Instances (1)*:
+```solidity
+File: DeprecatedFunctions.sol
+
+7:     mapping(address => uint256) private _applicants;
+
+```
+
